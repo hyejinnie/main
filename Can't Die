@@ -51,10 +51,10 @@
             <div class="project-description">
                 <div class="row">
                     <div class="col-md-6">
-                        <h2>Don't Die (2023)</h2>
+                        <h2>Can't Die (2023)</h2>
                         <p>&nbsp</p>
-                        <p>Installation</p>
-                        <p>Thread,plaster</p>
+                        <p>170 x 60 x 60</p>
+                        <p>Iron powder</p>
                         <p>&nbsp</p>
                         <!-- left side of the divided grid -->
                         <p>&nbsp</p>
@@ -81,14 +81,14 @@
                 <div class="row">
                     <div class="col-md-3">
                         <!-- first image -->
-                        <img src="white-main.jpg" class="project-image">
+                        <img src="fly-1-color.jpg" class="project-image">
                     </div>
 
                     <p>&nbsp</p>
 
                     <div class="col-md-3">
                         <!-- third image -->
-                        <img src="white1.jpg" class="project-image">
+                        <img src="fly2.jpg" class="project-image">
                     </div>
 
 
@@ -96,14 +96,14 @@
 
                     <div class="col-md-3">
                         <!-- third image -->
-                        <img src="white2.jpg" class="project-image">
+                        <img src="fly3.jpg" class="project-image">
                     </div>
 
                     <p>&nbsp</p>
 
                     <div class="col-md-3">
                         <!-- third image -->
-                        <img src="white6.jpg" class="project-image">
+                        <img src="fly4.jpg" class="project-image">
                     </div>
 
                     <p>&nbsp</p>
@@ -113,20 +113,7 @@
                         <img src="white3.jpg" class="project-image">
                     </div>
 
-                    <p>&nbsp</p>
-
-                    <div class="col-md-3">
-                        <!-- third image -->
-                        <img src="white4.jpg" class="project-image">
-                    </div>
-
-                    <p>&nbsp</p>
-
-                    <div class="col-md-3">
-                        <!-- third image -->
-                        <img src="white5.jpg" class="project-image">
-                    </div>
-
+                  
 
 
 
