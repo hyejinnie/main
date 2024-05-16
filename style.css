@@ -245,6 +245,11 @@ a {
 	
 }
 
+.project-image {
+    max-width: 50%;
+    height: auto;
+}
+
 
 
 
