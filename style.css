@@ -203,7 +203,7 @@ a {
   
   .col-md-6 {
 	position: relative;
-	width: %;
+	width: 50%;
 	min-height: 1px;
 	padding-right: 15px;
 	padding-left: 15px;
@@ -218,7 +218,7 @@ a {
   
   .col-md-3 {
 	position: relative;
-	width: 100%;
+	width: 50%;
 	min-height: 1px;
 	padding-right: 15px;
 	padding-left: 15px;
@@ -239,7 +239,7 @@ a {
   /* Image with caption */
 
 .image {
-	max-width: 100%;
+	max-width: 50%;
 	margin-top: 10px;
 
 	
