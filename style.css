@@ -39,11 +39,12 @@ a:hover {
   padding-left: 10px;
   font-family: 'Noto Serif KR', serif;
   color: white;
-  font-size: 20px; /* 이름 크기 키움 */
+  font-size: 18px; /* 이름 글자 크게 */
 }
 
+/* 이메일/인스타 글씨 크기 */
 #header_text h6 {
-  font-size: 12px; /* 이메일 글씨 크기 */
+  font-size: 12px;
 }
 
 /* footer */
@@ -72,7 +73,7 @@ footer {
 
 /* 컨테이너 */
 .container {
-  margin-right: 160px; /* 오른쪽 사이드 메뉴 공간 확보 */
+  margin-right: 180px; /* 오른쪽 사이드 메뉴 공간 확보 */
 }
 
 /* 메인 이미지 섹션 */
@@ -88,16 +89,16 @@ footer {
   width: 150px;
   position: fixed;
   top: 10px; /* 이름과 수평 맞춤 */
-  right: 20px; /* 오른쪽으로 약간 띄움 */
+  right: 20px; /* 오른쪽으로 조금 이동 */
   background-color: rgba(0,0,0,0.95);
   overflow-x: hidden;
+  padding-top: 0;
   z-index: 1000;
 }
 
 .sidebar ul {
   list-style-type: none;
   padding-left: 0;
-  margin: 0;
 }
 
 .sidebar ul li {
@@ -107,7 +108,7 @@ footer {
 .sidebar ul li a {
   color: white;
   font-family: 'Noto Serif KR', serif;
-  font-size: 12px; /* 기존 글씨 크기 유지 */
+  font-size: 12px; /* 이메일 글씨 크기와 동일 */
   display: block;
   transition: 0.3s;
 }
