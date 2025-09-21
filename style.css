@@ -32,21 +32,25 @@ a:hover {
 .header {
   background-color: transparent;
   font-size: 14px;
+  position: relative;
 }
 
 .header-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start; /* 왼쪽 정렬 */
   align-items: center; /* 이름과 사이드 메뉴 수평 정렬 */
   padding: 10px 20px;
+  position: relative;
 }
 
 #header_text h3 {
-  font-size: 28px; /* HYEJIN NOH 이름 크게 */
+  font-size: 28px; /* 이름 크게 */
+  margin-right: 30px; /* 사이드 메뉴와 간격 */
 }
 
 #header_text h6 {
-  font-size: 12px; /* 이메일과 인스타 글자 크기 */
+  font-size: 12px; /* 이메일 글씨 크기 */
+  margin: 2px 0;
 }
 
 /* footer */
@@ -75,7 +79,7 @@ footer {
 
 /* 컨테이너 */
 .container {
-  margin-right: 180px; /* 오른쪽 사이드 메뉴 공간 확보 */
+  margin-right: 200px; /* 오른쪽 사이드 메뉴 공간 확보 */
 }
 
 /* 메인 이미지 섹션 */
@@ -87,25 +91,29 @@ footer {
 
 /* 사이드 메뉴 */
 .sidebar {
-  position: relative; /* 이름과 수평으로 정렬 */
-  width: 150px;
+  position: fixed; /* 화면 오른쪽 고정 */
+  top: 20px;       /* 헤더 높이 정도 아래 */
+  right: 20px;     /* 오른쪽 여백 */
+  width: auto;
+  z-index: 1000;
 }
 
 .sidebar ul {
   list-style-type: none;
   padding-left: 0;
   margin: 0;
+  display: flex;
+  gap: 20px; /* 메뉴 사이 간격 */
 }
 
 .sidebar ul li {
-  margin-bottom: 15px;
+  margin: 0;
 }
 
 .sidebar ul li a {
   color: white;
   font-family: 'Noto Serif KR', serif;
-  font-size: 12px; /* 이메일 글자 크기와 동일 */
-  display: block;
+  font-size: 12px; /* 이메일 글씨 크기와 동일 */
   transition: 0.3s;
 }
 
@@ -113,3 +121,4 @@ footer {
   background-color: rgba(255, 255, 255, 0.1);
   padding-left: 5px;
 }
+
