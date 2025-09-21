@@ -70,6 +70,7 @@ footer {
 /* 컨테이너 */
 .container {
   margin-right: 20px; /* 오른쪽 사이드 메뉴 공간 확보 */
+  padding-left: 20px; /* 왼쪽 이름과 수직 정렬 맞추기 */
 }
 
 /* 메인 이미지 섹션 */
@@ -111,3 +112,4 @@ footer {
   background-color: rgba(255, 255, 255, 0.1);
   padding-left: 5px;
 }
+
