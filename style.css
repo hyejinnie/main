@@ -6,22 +6,22 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* background-color 제거! */
+  box-sizing: border-box;
 }
 
 body {
-  background-color: black;       /* 전체 배경 검정 */
-  color: white;                  /* 기본 글씨색 흰색 */
+  background-color: black;
+  color: white;
   font-family: 'Noto Serif KR', serif;
 }
 
 span[lang="en"], .en {
-  font-family: 'Garamond Premier Pro', serif; /* 영어는 가람운드 */
+  font-family: 'Garamond Premier Pro', serif;
 }
 
 a {
   text-decoration: none;
-  color: white; /* 링크도 흰색 */
+  color: white;
 }
 
 a:hover {
@@ -38,7 +38,7 @@ a:hover {
   padding-top: 10px;
   padding-left: 10px;
   font-family: 'Noto Serif KR', serif;
-  color: white; /* 헤더 글씨 흰색 */
+  color: white;
   font-size: 12px;
 }
 
@@ -55,47 +55,62 @@ footer {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+/* 프로젝트 썸네일 */
+#project_thumnail_1, .photo_section div {
+  background-color: black;
+  color: white;
+}
+
+#project_thumnail_1 img {
+  background-color: black;
+  display: block;
+}
+
+/* 컨테이너 */
+.container {
+  margin-right: 160px; /* 오른쪽 사이드 메뉴 공간 확보 */
+}
+
+/* 메인 이미지 섹션 */
+.photo_section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
 /* 사이드 메뉴 */
-.side-menu {
+.sidebar {
   height: 100%;
-  width: 0;
+  width: 150px;
   position: fixed;
   top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.95);
+  right: 0;
+  background-color: rgba(0,0,0,0.95);
   overflow-x: hidden;
-  transition: 0.4s;
   padding-top: 60px;
   z-index: 1000;
 }
 
-.side-menu a {
-  padding: 10px 20px;
-  text-decoration: none;
-  font-size: 16px;
+.sidebar ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 20px;
+}
+
+.sidebar ul li a {
   color: white;
+  font-family: 'Noto Serif KR', serif;
+  font-size: 16px;
   display: block;
   transition: 0.3s;
-  font-family: 'Noto Serif KR', serif;
 }
 
-.side-menu a:hover {
+.sidebar ul li a:hover {
   background-color: rgba(255, 255, 255, 0.1);
+  padding-left: 5px;
 }
-
-.side-menu .close-btn {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  font-size: 24px;
-  color: white;
-  cursor: pointer;
-}
-
-
-
-
-
-
 
 
