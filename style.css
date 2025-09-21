@@ -15,6 +15,7 @@ body {
   font-family: 'Noto Serif KR', serif;
 }
 
+/* 영어 폰트 */
 span[lang="en"], .en {
   font-family: 'Garamond Premier Pro', serif;
 }
@@ -39,7 +40,7 @@ a:hover {
   padding-left: 10px;
   font-family: 'Noto Serif KR', serif;
   color: white;
-  font-size: 14px; /* 이름 조금 키움 */
+  font-size: 14px; /* 왼쪽 상단 이름 크기 조절 */
 }
 
 /* footer */
@@ -68,7 +69,7 @@ footer {
 
 /* 컨테이너 */
 .container {
-  margin-right: 180px; /* 오른쪽 메뉴바 공간 확보 */
+  margin-right: 160px; /* 오른쪽 사이드 메뉴 공간 확보 */
 }
 
 /* 메인 이미지 섹션 */
@@ -78,30 +79,35 @@ footer {
   gap: 10px;
 }
 
-/* 오른쪽 메뉴바 */
+/* 사이드 메뉴 */
 .sidebar {
+  height: 100%;
+  width: 150px;
   position: fixed;
-  top: 20px;      /* 헤더 상단과 맞춤 */
-  right: 20px;    /* 화면 오른쪽 끝에 붙임 */
-  display: flex;
-  flex-direction: column;
+  top: 10px; /* 위쪽 조금 띄우기 */
+  right: 10px; /* 오른쪽 끝에 붙이기 */
+  background-color: rgba(0,0,0,0.95);
+  padding-top: 0;
   z-index: 1000;
+  display: flex;
+  flex-direction: column; /* 세로 정렬 */
+  align-items: flex-start; /* 메뉴 항목 왼쪽 정렬 */
 }
 
 .sidebar ul {
   list-style-type: none;
-  padding: 0;
+  padding-left: 0;
   margin: 0;
 }
 
 .sidebar ul li {
-  margin-bottom: 15px;
+  margin-bottom: 20px; /* 메뉴 간 간격 */
 }
 
 .sidebar ul li a {
   color: white;
   font-family: 'Noto Serif KR', serif;
-  font-size: 12px; /* 이메일/인스타와 동일 */
+  font-size: 12px; /* 이메일 크기와 동일 */
   display: block;
   transition: 0.3s;
 }
