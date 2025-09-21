@@ -39,7 +39,11 @@ a:hover {
   padding-left: 10px;
   font-family: 'Noto Serif KR', serif;
   color: white;
-  font-size: 12px;
+  font-size: 20px; /* 이름 크기 키움 */
+}
+
+#header_text h6 {
+  font-size: 12px; /* 이메일 글씨 크기 */
 }
 
 /* footer */
@@ -83,27 +87,27 @@ footer {
   height: 100%;
   width: 150px;
   position: fixed;
-  top: 0;
-  right: 0;
+  top: 10px; /* 이름과 수평 맞춤 */
+  right: 20px; /* 오른쪽으로 약간 띄움 */
   background-color: rgba(0,0,0,0.95);
   overflow-x: hidden;
-  padding-top: 60px;
   z-index: 1000;
 }
 
 .sidebar ul {
   list-style-type: none;
   padding-left: 0;
+  margin: 0;
 }
 
 .sidebar ul li {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .sidebar ul li a {
   color: white;
   font-family: 'Noto Serif KR', serif;
-  font-size: 12px !important; /* 이메일과 동일하게 */
+  font-size: 12px; /* 기존 글씨 크기 유지 */
   display: block;
   transition: 0.3s;
 }
@@ -111,11 +115,4 @@ footer {
 .sidebar ul li a:hover {
   background-color: rgba(255, 255, 255, 0.1);
   padding-left: 5px;
-}
-
-/* 반응형 */
-@media screen and (max-width: 767px) {
-  body {font-size: 80%;}
-  #header_text {font-size: 12px;}
-  .sidebar ul li a {font-size: 12px !important;}
 }
