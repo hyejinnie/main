@@ -124,4 +124,23 @@ footer {
 .edu-last {
   margin-bottom: 20px; /* 원하는 간격으로 조절 가능 */
 }
+/* Education 마지막 줄과 Project 사이 간격 */
+.edu-last {
+  margin-bottom: 20px; /* Project와 간격 */
+}
+
+/* Section 제목/본문 왼쪽 여백 #header_text와 수직 맞춤 */
+.section-title,
+.section-text {
+  padding-left: 20px; /* #header_text의 padding-left와 동일 */
+}
+
+/* Section 글씨 크기 조정 */
+.section-title {
+  font-size: 14px;
+}
+
+.section-text {
+  font-size: 12px;
+}
 
