@@ -150,3 +150,12 @@ footer {
   font-size: 12px;
   color: white;
 }
+/* work 상세페이지 글 폰트 조정 */
+.work-detail .section-title,
+.work-detail .section-text {
+  font-size: 12px;          /* about 페이지 글 크기와 동일 */
+  line-height: 1.5;         /* 읽기 좋게 줄간격 조정 */
+  position: relative;
+  left: 40px;               /* HYEJIN NOH와 수직 맞춤 */
+  margin-top: 10px;         /* HYEJIN NOH와 글 간격 */
+}
