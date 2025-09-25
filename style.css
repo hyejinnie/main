@@ -164,4 +164,28 @@ footer {
   font-size: 12px;         /* 캡션 글씨 크기 */
   color: white;
 }
+.photo_section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  padding-left: 40px;
+}
+
+#project_thumnail_1 {
+  width: 300px;
+  text-align: center;
+}
+
+#project_thumnail_1 img {
+  width: 100%;
+  height: auto;
+}
+
+#project_thumnail_1 span {
+  display: block;
+  margin-top: 5px;
+  font-size: 12px;
+  color: white;
+}
 
