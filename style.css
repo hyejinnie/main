@@ -112,4 +112,11 @@ footer {
   background-color: rgba(255, 255, 255, 0.1);
   padding-left: 5px;
 }
+/* Education & Project section */
+.section-title {
+  font-size: 14px;   /* h4 기본보다 한 단계 줄임 */
+}
 
+.section-text {
+  font-size: 12px;   /* p 텍스트도 조금 줄임 */
+}
