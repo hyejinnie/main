@@ -71,6 +71,8 @@ footer {
   right: 20px; 
   background-color: rgba(0,0,0,0.95);
   z-index: 1000;
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 
 .sidebar ul {
@@ -80,7 +82,7 @@ footer {
 }
 
 .sidebar ul li {
-  margin: 0 15px;
+  margin: 0 10px;
 }
 
 .sidebar ul li a {
@@ -88,41 +90,72 @@ footer {
   font-family: 'Noto Serif KR', serif;
   font-size: 12px; 
   display: block;
+  padding: 5px 8px;
+  border-radius: 3px;
 }
 
 .sidebar ul li a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  padding-left: 5px;
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
-/* Work / Object 9x2 그리드 */
-.photo_section {
+/* ============================= */
+/* index.html 화면 가로 정렬 */
+.index .photo_section {
   display: flex;
-  flex-wrap: wrap;               /* 줄 바꿈 허용 */
-  gap: 20px;                     /* 아이템 간 간격 */
-  justify-content: center;       /* 전체 가운데 정렬 */
-  align-items: flex-start;       /* 위쪽 기준 정렬 */
-  max-width: calc(9 * 100px + 8 * 20px); /* 9개 + gap 8개 기준 */
-  margin: 0 auto;                /* 컨테이너 가운데 정렬 */
-  padding: 20px 0;               /* 위아래 여백 */
+  flex-wrap: wrap;       /* 줄 바꿈 허용 */
+  gap: 15px;             /* 아이템 간 간격 */
+  justify-content: center; 
+  align-items: flex-start; /* 위 정렬 */
+  padding: 20px 0;
 }
 
-/* 모든 썸네일 공통 적용 */
-.photo_section div, .project_thumnail_1 {
-  width: 100px;                  /* 고정 100px */
-  flex: 0 0 auto;                /* 줄 안에서 크기 고정 */
-  text-align: center;             /* 캡션 가운데 정렬 */
+.index .photo_section div,
+.index .project_thumnail_1 {
+  width: 100px;          /* 가로 크기 */
+  text-align: center;
 }
 
-.photo_section div img, .project_thumnail_1 img {
-  width: 100%;                   /* div 안에서 꽉 차게 */
-  height: auto;                  /* 비율 유지 */
-  display: block;                /* 이미지 아래 여백 제거 */
+.index .photo_section div img,
+.index .project_thumnail_1 img {
+  width: 100%;
+  height: auto;
 }
 
-.photo_section div span, .project_thumnail_1 span {
+.index .photo_section div span,
+.index .project_thumnail_1 span {
   display: block;
-  margin-top: 5px;               /* 이미지와 캡션 간격 */
+  margin-top: 5px;
+  font-size: 12px;
+  color: white;
+}
+
+/* ============================= */
+/* Work / Object / About 세로 정렬 (원상복구) */
+.work-object .photo_section,
+.about .photo_section {
+  display: flex;
+  flex-direction: column; /* 세로 정렬 */
+  gap: 20px;
+  align-items: center;
+  padding-left: 40px;
+}
+
+.work-object .photo_section div,
+.about .photo_section div {
+  width: 400px;
+  text-align: center;
+}
+
+.work-object .photo_section div img,
+.about .photo_section div img {
+  width: 100%;
+  height: auto;
+}
+
+.work-object .photo_section div span,
+.about .photo_section div span {
+  display: block;
+  margin-top: 5px;
   font-size: 12px;
   color: white;
 }
