@@ -184,4 +184,39 @@ body.index-page .photo_section > div span {
   font-size: 12px;
   color: white;
 }
+/* index.html 전용 사진 갤러리 */
+body.index-page .photo_section {
+  display: flex !important;             /* 가로 정렬 */
+  flex-wrap: wrap !important;           /* 여러 줄 가능 */
+  justify-content: center !important;   /* 화면 가운데 정렬 */
+  align-items: flex-start !important;   /* 사진 위쪽 정렬 */
+  gap: 10px !important;                 /* 사진 사이 간격 */
+  padding-left: 0 !important;           /* 왼쪽 여백 제거, 가운데 정렬 */
+}
+
+/* index.html 전용 사진 div */
+body.index-page .photo_section > div {
+  flex: 0 0 calc((100% / 9) - 10px) !important; /* 한 줄 최대 9개 */
+  max-width: calc((100% / 9) - 10px) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+/* index.html 전용 이미지 */
+body.index-page .photo_section > div img {
+  width: 100% !important;
+  height: auto !important;
+  object-fit: cover !important;  /* 사진 위쪽 정렬 유지 */
+}
+
+/* index.html 전용 캡션 */
+body.index-page .photo_section > div span {
+  display: block !important;
+  margin-top: 5px !important;
+  font-size: 12px !important;
+  color: white !important;
+}
+
 
