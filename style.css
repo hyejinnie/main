@@ -36,11 +36,11 @@ a:hover {
 
 /* 왼쪽 상단 이름 위치 및 크기 조정 */
 #header_text {
-  padding-top: 30px; /* 상단 아래로 */
-  padding-left: 20px; /* 왼쪽 여유 */
+  padding-top: 30px;
+  padding-left: 20px; 
   font-family: 'Noto Serif KR', serif;
   color: white;
-  font-size: 16px; /* 이름 크기 키움 */
+  font-size: 16px;
 }
 
 /* footer */
@@ -69,66 +69,20 @@ footer {
 
 /* 컨테이너 */
 .container {
-  margin-right: 20px; /* 오른쪽 사이드 메뉴 공간 확보 */
-  padding-left: 20px; /* 왼쪽 이름과 수직 정렬 맞추기 */
+  margin-right: 20px; 
+  position: relative; /* 자식 요소 위치 기준 */
 }
 
-/* 메인 이미지 섹션 */
-.photo_section {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-/* 오른쪽 가로 사이드 메뉴 */
-.sidebar {
-  height: 40px;
-  width: auto;
-  position: fixed;
-  top: 30px; /* 왼쪽 이름과 수평 */
-  right: 20px; /* 오른쪽 살짝 띄움 */
-  background-color: rgba(0,0,0,0.95);
-  z-index: 1000;
-}
-
-.sidebar ul {
-  list-style-type: none;
-  display: flex; /* 가로 정렬 */
-  padding-left: 0;
-}
-
-.sidebar ul li {
-  margin: 0 15px; /* 항목 간격 */
-}
-
-.sidebar ul li a {
-  color: white;
-  font-family: 'Noto Serif KR', serif;
-  font-size: 12px; /* 이메일과 동일하게 */
-  display: block;
-}
-
-.sidebar ul li a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  padding-left: 5px;
-}
-/* Education & Project section */
-.section-title {
-  font-size: 14px;   /* h4 기본보다 한 단계 줄임 */
-}
-
-.section-text {
-  font-size: 12px;   /* p 텍스트도 조금 줄임 */
-}
-/* Education 마지막 줄과 Project 사이 간격 */
-.edu-last {
-  margin-bottom: 20px; /* Project와 간격 */
-}
-
-/* Section 제목/본문 왼쪽 여백 #header_text와 수직 맞춤 */
+/* Section 글을 HYEJIN NOH 이름과 수직 맞춤 */
 .section-title,
 .section-text {
-  padding-left: 60px; /* #header_text와 수직 맞춤, 20px → 60px로 오른쪽 이동 */
+  position: relative;
+  left: 40px; /* 화면에서 HYEJIN NOH와 수직 맞춤, 필요에 따라 조절 */
+}
+
+/* Education 마지막 줄과 Project 사이 간격 */
+.edu-last {
+  margin-bottom: 20px;
 }
 
 /* Section 글씨 크기 조정 */
@@ -140,3 +94,35 @@ footer {
   font-size: 12px;
 }
 
+/* 오른쪽 가로 사이드 메뉴 */
+.sidebar {
+  height: 40px;
+  width: auto;
+  position: fixed;
+  top: 30px; 
+  right: 20px; 
+  background-color: rgba(0,0,0,0.95);
+  z-index: 1000;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  display: flex; 
+  padding-left: 0;
+}
+
+.sidebar ul li {
+  margin: 0 15px;
+}
+
+.sidebar ul li a {
+  color: white;
+  font-family: 'Noto Serif KR', serif;
+  font-size: 12px; 
+  display: block;
+}
+
+.sidebar ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding-left: 5px;
+}
