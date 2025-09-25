@@ -95,31 +95,32 @@ footer {
   padding-left: 5px;
 }
 
-/* Work / Object 가로 정렬 한 줄 */
+/* Work / Object 가로 정렬 (한 줄로, 가운데) */
 .photo_section {
-  display: flex;           /* 가로 정렬 */
-  flex-wrap: nowrap;       /* 줄 바꿈 금지 */
-  gap: 20px;               /* 아이템 간 간격 */
-  justify-content: center; /* 가운데 정렬 */
-  padding: 20px 0;         /* 위아래 여백 */
-  overflow-x: auto;        /* 화면 좁으면 가로 스크롤 */
+  display: flex;            /* 가로 정렬 */
+  flex-wrap: nowrap;        /* 한 줄 유지 */
+  gap: 20px;                /* 아이템 간 간격 */
+  justify-content: center;  /* 가운데 정렬 */
+  align-items: center;      /* 세로 가운데 맞춤 */
+  padding: 20px 0;          /* 위아래 여백 */
+  overflow-x: hidden;       /* 화면 벗어나도 스크롤 없이 잘림 */
 }
 
 /* 모든 썸네일 공통 적용 */
 .photo_section div, .project_thumnail_1 {
-  flex: 0 0 auto;  /* flex-grow:0, flex-shrink:0, width 유지 */
-  width: 100px;    /* 가로 크기 100px으로 줄임 */
-  text-align: center; /* 이미지와 캡션 가운데 정렬 */
+  flex: 0 0 auto;           /* 크기 고정 */
+  width: 100px;             /* 가로 100px */
+  text-align: center;       /* 이미지와 캡션 가운데 정렬 */
 }
 
 .photo_section div img, .project_thumnail_1 img {
-  width: 100%;    /* div 안에서 꽉 차게 */
-  height: auto;   /* 비율 유지 */
+  width: 100%;              /* div 안에서 꽉 차게 */
+  height: auto;             /* 비율 유지 */
 }
 
 .photo_section div span, .project_thumnail_1 span {
   display: block;
-  margin-top: 5px;    /* 이미지와 캡션 사이 간격 */
+  margin-top: 5px;          /* 이미지와 캡션 사이 간격 */
   font-size: 12px;
   color: white;
 }
