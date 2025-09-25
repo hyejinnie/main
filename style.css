@@ -120,3 +120,8 @@ footer {
 .section-text {
   font-size: 12px;   /* p 텍스트도 조금 줄임 */
 }
+/* Education 마지막 줄과 Project 사이 간격 */
+.edu-last {
+  margin-bottom: 20px; /* 원하는 간격으로 조절 가능 */
+}
+
