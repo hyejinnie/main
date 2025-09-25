@@ -123,7 +123,7 @@ footer {
   padding-left: 5px;
 }
 
-/* Work / Objects 공통 사진 섹션 */
+/* Work / Object 공통 사진 섹션 */
 .photo_section {
   display: flex;
   flex-direction: column; /* 세로 정렬 */
@@ -132,20 +132,20 @@ footer {
   padding-left: 40px;      /* 왼쪽 여백: HYEJIN NOH와 수직 맞춤 */
 }
 
-/* 각 썸네일 공통 */
-#project_thumnail_1 {
-  width: 400px;            /* 기존 300px → 중간 정도로 확대 */
-  text-align: center;
+/* 모든 썸네일 공통 적용 */
+.photo_section div {
+  width: 400px;       /* 이미지 크기 (Work/Objects 공통) */
+  text-align: center; /* 이미지와 캡션 가운데 정렬 */
 }
 
-#project_thumnail_1 img {
-  width: 100%;             /* div 안에서 꽉 차게 */
-  height: auto;            /* 비율 유지 */
+.photo_section div img {
+  width: 100%;        /* div 안에서 꽉 차게 */
+  height: auto;       /* 비율 유지 */
 }
 
-#project_thumnail_1 span {
+.photo_section div span {
   display: block;
-  margin-top: 5px;         /* 이미지와 캡션 사이 간격 */
+  margin-top: 5px;    /* 이미지와 캡션 사이 간격 */
   font-size: 12px;
   color: white;
 }
