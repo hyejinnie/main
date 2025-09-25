@@ -36,11 +36,11 @@ a:hover {
 
 /* 왼쪽 상단 이름 위치 및 크기 조정 */
 #header_text {
-  padding-top: 30px; /* 상단 아래로 */
-  padding-left: 20px; /* 왼쪽 여유 */
+  padding-top: 30px;
+  padding-left: 20px;
   font-family: 'Noto Serif KR', serif;
   color: white;
-  font-size: 16px; /* 이름 크기 */
+  font-size: 16px;
 }
 
 /* footer */
@@ -56,41 +56,32 @@ footer {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* 프로젝트 썸네일 */
-#project_thumnail_1, .photo_section div {
-  background-color: black;
-  color: white;
-}
-
-#project_thumnail_1 img {
-  background-color: black;
-  display: block;
-}
-
 /* 컨테이너 */
 .container {
-  margin-right: 20px; 
-  position: relative; /* 자식 요소 위치 기준 */
+  margin-right: 20px;
+  position: relative;
 }
 
-/* Education/Project Section 글 위치 조정 */
+/* Section 글 위치 및 간격 */
 .section-title,
 .section-text {
   position: relative;
-  left: 40px; /* HYEJIN NOH 이름과 수직 맞춤 */
+  left: 40px; /* HYEJIN NOH와 수직 맞춤 */
 }
 
-/* 이름과 Education 간격 조정 */
 .section-title:first-of-type {
-  margin-top: 40px; /* 이름과 첫 Section 간격, 필요시 숫자 조절 */
+  margin-top: 40px; /* 이름과 첫 Section 간격 */
 }
 
-/* Education 마지막 줄과 Project 사이 간격 */
 .edu-last {
-  margin-bottom: 20px; /* Project와 간격 */
+  margin-bottom: 20px; /* Education 마지막 줄과 Project 사이 간격 */
 }
 
-/* 글씨 크기 조정 */
+.project-last {
+  margin-bottom: 20px; /* Project 마지막 줄과 Featured 사이 간격 */
+}
+
+/* Section 글씨 크기 */
 .section-title {
   font-size: 14px;
 }
@@ -131,61 +122,30 @@ footer {
   background-color: rgba(255, 255, 255, 0.1);
   padding-left: 5px;
 }
-/* Education 마지막 줄과 Project 사이 간격 */
-.edu-last {
-  margin-bottom: 20px; /* Project와 간격 */
-}
 
-/* Project 마지막 줄과 Featured 사이 간격 */
-.project-last {
-  margin-bottom: 20px; /* Featured와 간격, edu-last와 동일 */
-}
+/* Work / Objects 공통 사진 섹션 */
 .photo_section {
   display: flex;
   flex-direction: column; /* 세로 정렬 */
   gap: 20px;              /* 아이템 간 간격 */
-  align-items: center;     /* 각 아이템 가운데 정렬 */
+  align-items: center;     /* 가운데 정렬 */
   padding-left: 40px;      /* 왼쪽 여백: HYEJIN NOH와 수직 맞춤 */
 }
 
+/* 각 썸네일 공통 */
 #project_thumnail_1 {
-  width: 300px;            /* 이미지 크기 조절 */
-  text-align: center;      /* 이미지와 캡션 가운데 정렬 */
+  width: 400px;            /* 기존 300px → 중간 정도로 확대 */
+  text-align: center;
 }
 
 #project_thumnail_1 img {
-  width: 100%;             /* div 안에서 꽉 차게, div 크기로 조정 */
+  width: 100%;             /* div 안에서 꽉 차게 */
   height: auto;            /* 비율 유지 */
 }
 
 #project_thumnail_1 span {
   display: block;
   margin-top: 5px;         /* 이미지와 캡션 사이 간격 */
-  font-size: 12px;         /* 캡션 글씨 크기 */
-  color: white;
-}
-.photo_section {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
-  padding-left: 40px;
-}
-
-#project_thumnail_1 {
-  width: 300px;
-  text-align: center;
-}
-
-#project_thumnail_1 img {
-  width: 100%;
-  height: auto;
-}
-
-#project_thumnail_1 span {
-  display: block;
-  margin-top: 5px;
   font-size: 12px;
   color: white;
 }
-
