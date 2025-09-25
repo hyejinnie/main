@@ -62,34 +62,6 @@ footer {
   position: relative;
 }
 
-/* Section 글 위치 및 간격 */
-.section-title,
-.section-text {
-  position: relative;
-  left: 40px; /* HYEJIN NOH와 수직 맞춤 */
-}
-
-.section-title:first-of-type {
-  margin-top: 40px; /* 이름과 첫 Section 간격 */
-}
-
-.edu-last {
-  margin-bottom: 20px; /* Education 마지막 줄과 Project 사이 간격 */
-}
-
-.project-last {
-  margin-bottom: 20px; /* Project 마지막 줄과 Featured 사이 간격 */
-}
-
-/* Section 글씨 크기 */
-.section-title {
-  font-size: 14px;
-}
-
-.section-text {
-  font-size: 12px;
-}
-
 /* 오른쪽 가로 사이드 메뉴 */
 .sidebar {
   height: 40px;
@@ -123,30 +95,29 @@ footer {
   padding-left: 5px;
 }
 
-/* Work / Object 사진 섹션 - 가로 정렬 */
+/* Work / Object 가로 정렬 */
 .photo_section {
-  display: flex;
-  flex-direction: row;      /* 가로 정렬 */
-  flex-wrap: wrap;          /* 화면 좁으면 아래로 */
-  justify-content: center;  /* 가운데 정렬 */
-  gap: 20px;                /* 아이템 간 간격 */
-  padding-left: 0;          /* 왼쪽 여백 제거 */
+  display: flex;          /* 가로 정렬 */
+  flex-wrap: wrap;        /* 줄 바꿈 허용 */
+  gap: 20px;              /* 아이템 간 간격 */
+  justify-content: center; /* 가운데 정렬 */
+  padding: 20px 0;        /* 위아래 여백 */
 }
 
 /* 모든 썸네일 공통 적용 */
-.photo_section div {
-  width: 200px;             /* 이미지 크기 200px */
-  text-align: center;       /* 이미지와 캡션 가운데 정렬 */
+.photo_section div, .project_thumnail_1 {
+  width: 200px;       /* 가로 크기 200px */
+  text-align: center; /* 이미지와 캡션 가운데 정렬 */
 }
 
-.photo_section div img {
-  width: 100%;              /* div 안에서 꽉 차게 */
-  height: auto;             /* 비율 유지 */
+.photo_section div img, .project_thumnail_1 img {
+  width: 100%;        /* div 안에서 꽉 차게 */
+  height: auto;       /* 비율 유지 */
 }
 
-.photo_section div span {
+.photo_section div span, .project_thumnail_1 span {
   display: block;
-  margin-top: 5px;          /* 이미지와 캡션 사이 간격 */
+  margin-top: 5px;    /* 이미지와 캡션 사이 간격 */
   font-size: 12px;
   color: white;
 }
