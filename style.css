@@ -13,6 +13,7 @@ body {
   background-color: black;
   color: white;
   font-family: 'Noto Serif KR', serif;
+  font-size: 14px; /* 폰트 크기 하나 줄임 */
 }
 
 span[lang="en"], .en {
@@ -37,7 +38,7 @@ a:hover {
 /* 왼쪽 상단 이름 위치 및 크기 조정 */
 #header_text {
   padding-top: 30px;
-  padding-left: 20px;
+  padding-left: 40px; /* 왼쪽과 수직 정렬 */
   font-family: 'Noto Serif KR', serif;
   color: white;
   font-size: 16px;
@@ -71,8 +72,6 @@ footer {
   right: 20px; 
   background-color: rgba(0,0,0,0.95);
   z-index: 1000;
-  padding: 5px 10px;
-  border-radius: 5px;
 }
 
 .sidebar ul {
@@ -82,7 +81,7 @@ footer {
 }
 
 .sidebar ul li {
-  margin: 0 10px;
+  margin: 0 15px;
 }
 
 .sidebar ul li a {
@@ -90,72 +89,64 @@ footer {
   font-family: 'Noto Serif KR', serif;
   font-size: 12px; 
   display: block;
-  padding: 5px 8px;
-  border-radius: 3px;
 }
 
 .sidebar ul li a:hover {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.1);
+  padding-left: 5px;
 }
 
-/* ============================= */
-/* index.html 화면 가로 정렬 */
-.index .photo_section {
-  display: flex;
-  flex-wrap: wrap;       /* 줄 바꿈 허용 */
-  gap: 15px;             /* 아이템 간 간격 */
-  justify-content: center; 
-  align-items: flex-start; /* 위 정렬 */
-  padding: 20px 0;
+/* Section 글 위치 및 간격 */
+.section-title,
+.section-text {
+  position: relative;
+  left: 40px; /* HYEJIN NOH와 수직 맞춤 */
 }
 
-.index .photo_section div,
-.index .project_thumnail_1 {
-  width: 100px;          /* 가로 크기 */
-  text-align: center;
+.section-title:first-of-type {
+  margin-top: 20px; /* 이름과 첫 Section 간격 두칸 정도 */
 }
 
-.index .photo_section div img,
-.index .project_thumnail_1 img {
-  width: 100%;
-  height: auto;
+.edu-last {
+  margin-bottom: 10px; /* Education 마지막 줄과 Project 사이 한칸 정도 */
 }
 
-.index .photo_section div span,
-.index .project_thumnail_1 span {
-  display: block;
-  margin-top: 5px;
+.project-last {
+  margin-bottom: 10px; /* Project 마지막 줄과 Featured 사이 한칸 정도 */
+}
+
+/* Section 글씨 크기 */
+.section-title {
+  font-size: 14px;
+}
+
+.section-text {
   font-size: 12px;
-  color: white;
 }
 
-/* ============================= */
-/* Work / Object / About 세로 정렬 (원상복구) */
-.work-object .photo_section,
-.about .photo_section {
+/* Work / Object 공통 사진 섹션 */
+.photo_section {
   display: flex;
   flex-direction: column; /* 세로 정렬 */
-  gap: 20px;
-  align-items: center;
-  padding-left: 40px;
+  gap: 20px;              /* 아이템 간 간격 */
+  align-items: center;     /* 가운데 정렬 */
+  padding-left: 40px;      /* 왼쪽 여백: HYEJIN NOH와 수직 맞춤 */
 }
 
-.work-object .photo_section div,
-.about .photo_section div {
-  width: 400px;
-  text-align: center;
+/* 모든 썸네일 공통 적용 */
+.photo_section div {
+  width: 400px;       /* 이미지 크기 (Work/Objects 공통) */
+  text-align: center; /* 이미지와 캡션 가운데 정렬 */
 }
 
-.work-object .photo_section div img,
-.about .photo_section div img {
-  width: 100%;
-  height: auto;
+.photo_section div img {
+  width: 100%;        /* div 안에서 꽉 차게 */
+  height: auto;       /* 비율 유지 */
 }
 
-.work-object .photo_section div span,
-.about .photo_section div span {
+.photo_section div span {
   display: block;
-  margin-top: 5px;
+  margin-top: 5px;    /* 이미지와 캡션 사이 간격 */
   font-size: 12px;
   color: white;
 }
