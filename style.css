@@ -95,24 +95,26 @@ footer {
   padding-left: 5px;
 }
 
-/* Work / Object 가로 정렬 */
+/* Work / Object 가로 정렬 한 줄 */
 .photo_section {
-  display: flex;          /* 가로 정렬 */
-  flex-wrap: wrap;        /* 줄 바꿈 허용 */
-  gap: 20px;              /* 아이템 간 간격 */
+  display: flex;           /* 가로 정렬 */
+  flex-wrap: nowrap;       /* 줄 바꿈 금지 */
+  gap: 20px;               /* 아이템 간 간격 */
   justify-content: center; /* 가운데 정렬 */
-  padding: 20px 0;        /* 위아래 여백 */
+  padding: 20px 0;         /* 위아래 여백 */
+  overflow-x: auto;        /* 화면 좁으면 가로 스크롤 */
 }
 
 /* 모든 썸네일 공통 적용 */
 .photo_section div, .project_thumnail_1 {
-  width: 200px;       /* 가로 크기 200px */
+  flex: 0 0 auto;  /* flex-grow:0, flex-shrink:0, width 유지 */
+  width: 100px;    /* 가로 크기 100px으로 줄임 */
   text-align: center; /* 이미지와 캡션 가운데 정렬 */
 }
 
 .photo_section div img, .project_thumnail_1 img {
-  width: 100%;        /* div 안에서 꽉 차게 */
-  height: auto;       /* 비율 유지 */
+  width: 100%;    /* div 안에서 꽉 차게 */
+  height: auto;   /* 비율 유지 */
 }
 
 .photo_section div span, .project_thumnail_1 span {
