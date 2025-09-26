@@ -156,46 +156,32 @@ footer {
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  width: 100vw;
   scroll-behavior: smooth;
-}
-
-/* 가로 스크롤 래퍼 */
-.project-images {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  width: 100vw;
-  scroll-behavior: smooth;
-}
-/* 가로 스크롤 래퍼 */
-.project-images {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  gap: 20px;                  /* 이미지 간격 */
-  padding-left: 40px;         /* 글과 맞춤 */
+  width: 100vw;         /* 화면 전체 */
+  gap: 20px;            /* 이미지 간격 */
+  padding-left: 0;      /* 필요에 따라 조정 */
+  box-sizing: border-box;
 }
 
 /* 한 줄로 나열 */
 .project-images .row {
   display: flex;
   flex-wrap: nowrap;
-  gap: 20px;
 }
 
 /* 각 이미지 컨테이너 */
 .project-images .row .col-md-3 {
-  flex: 0 0 auto;             /* 이미지 크기만큼 폭 고정 */
+  flex: 0 0 100vw;       /* 화면 폭 전체 차지 */
   display: flex;
-  justify-content: center;     /* 가로 중앙 */
-  align-items: flex-end;       /* 세로 사진 아래 정렬 */
+  justify-content: center; /* 가로 중앙 */
+  align-items: flex-end;   /* 세로 사진 아래 정렬 */
   scroll-snap-align: start;
+  box-sizing: border-box;
 }
 
 /* 이미지 */
 .project-images .row .col-md-3 img {
-  max-width: 350px;
+  max-width: 350px;       /* 원하는 이미지 크기 */
   height: auto;
   object-fit: contain;
   display: block;
@@ -209,5 +195,5 @@ footer {
 /* 세로 사진 */
 .project-images .row .col-md-3 img.portrait {
   max-width: 350px;
-  margin-top: auto;            /* 세로 아래 정렬 */
+  margin-top: auto;       /* 세로 아래 정렬 */
 }
