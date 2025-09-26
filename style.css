@@ -173,40 +173,41 @@ footer {
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  width: 100vw;
-  scroll-behavior: smooth;
+  gap: 20px;                  /* 이미지 간격 */
+  padding-left: 40px;         /* 글과 맞춤 */
 }
 
-/* 한 페이지씩 스크롤 */
+/* 한 줄로 나열 */
 .project-images .row {
   display: flex;
   flex-wrap: nowrap;
-  gap: 0;
-  width: 100%;
+  gap: 20px;
 }
 
 /* 각 이미지 컨테이너 */
 .project-images .row .col-md-3 {
-  flex: 0 0 100vw;          /* 화면 한 장씩 */
+  flex: 0 0 auto;             /* 이미지 크기만큼 폭 고정 */
   display: flex;
-  justify-content: center;   /* 가로 중앙 */
-  align-items: flex-start;   /* 세로 위쪽 정렬 */
+  justify-content: center;     /* 가로 중앙 */
+  align-items: flex-end;       /* 세로 사진 아래 정렬 */
   scroll-snap-align: start;
-  padding-top: 60px;         /* 글과 간격, 필요하면 조절 */
-  box-sizing: border-box;
 }
 
 /* 이미지 */
 .project-images .row .col-md-3 img {
-  max-width: 350px;          /* 세로 기준 크기 */
-  height: auto;              /* 비율 유지 */
+  max-width: 350px;
+  height: auto;
   object-fit: contain;
   display: block;
-  margin: 0 auto;            /* 가로 중앙 */
 }
 
-/* 가로로 긴 이미지 */
+/* 가로 사진 */
 .project-images .row .col-md-3 img.landscape {
   max-width: 400px;
-  height: auto;
+}
+
+/* 세로 사진 */
+.project-images .row .col-md-3 img.portrait {
+  max-width: 350px;
+  margin-top: auto;            /* 세로 아래 정렬 */
 }
