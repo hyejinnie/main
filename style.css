@@ -160,6 +160,15 @@ footer {
   scroll-behavior: smooth;
 }
 
+/* 가로 스크롤 래퍼 */
+.project-images {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  width: 100vw;
+  scroll-behavior: smooth;
+}
+
 /* 한 페이지씩 스크롤 */
 .project-images .row {
   display: flex;
