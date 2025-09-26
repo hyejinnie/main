@@ -174,14 +174,14 @@ footer {
   flex: 0 0 100vw;       /* 화면 폭 전체 차지 */
   display: flex;
   justify-content: center; /* 가로 중앙 */
-  align-items: flex-end;   /* 세로 사진 아래 정렬 */
+  align-items: flex-end;   /* 기본: 아래 정렬 */
   scroll-snap-align: start;
   box-sizing: border-box;
 }
 
-/* 이미지 */
+/* 모든 이미지 기본 */
 .project-images .row .col-md-3 img {
-  max-width: 350px;       /* 원하는 이미지 크기 */
+  max-width: 370px;       /* 기본 이미지 크기 +20 */
   height: auto;
   object-fit: contain;
   display: block;
@@ -189,25 +189,14 @@ footer {
 
 /* 가로 사진 */
 .project-images .row .col-md-3 img.landscape {
-  max-width: 400px;
+  max-width: 420px;       /* 가로 사진 크기 +20 */
+  height: auto;
+  align-self: center;     /* 세로 방향 가운데 정렬 */
 }
 
 /* 세로 사진 */
 .project-images .row .col-md-3 img.portrait {
-  max-width: 350px;
-  margin-top: auto;       /* 세로 아래 정렬 */
-}
-/* 모든 이미지 기본 */
-.project-images .row .col-md-3 img {
-  max-width: 350px; /* 기본 이미지 크기 */
+  max-width: 370px;       /* 세로 사진 크기 +20 */
   height: auto;
-  object-fit: contain;
-  display: block;
+  /* 위치 변경 없음 (아래 정렬 유지) */
 }
-
-/* 가로 사진만 크기 키움 */
-.project-images .row .col-md-3 img.landscape {
-  max-width: 400px; /* 가로 사진만 크게 */
-  height: auto;
-}
-
