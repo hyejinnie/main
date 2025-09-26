@@ -168,28 +168,45 @@ footer {
   width: 100vw;
   scroll-behavior: smooth;
 }
-
-.project-images .row .col-md-3 {
-  flex: 0 0 100vw;          
+/* 가로 스크롤 래퍼 */
+.project-images {
   display: flex;
-  justify-content: center;    /* 가로 중앙 */
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  width: 100vw;
+  scroll-behavior: smooth;
+}
+
+/* 한 페이지씩 스크롤 */
+.project-images .row {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0;
+  width: 100%;
+}
+
+/* 각 이미지 컨테이너 */
+.project-images .row .col-md-3 {
+  flex: 0 0 100vw;          /* 화면 한 장씩 */
+  display: flex;
+  justify-content: center;   /* 가로 중앙 */
+  align-items: flex-start;   /* 세로 위쪽 정렬 */
   scroll-snap-align: start;
+  padding-top: 60px;         /* 글과 간격, 필요하면 조절 */
   box-sizing: border-box;
 }
 
-/* 가로 사진: 화면 중앙 */
+/* 이미지 */
+.project-images .row .col-md-3 img {
+  max-width: 350px;          /* 세로 기준 크기 */
+  height: auto;              /* 비율 유지 */
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;            /* 가로 중앙 */
+}
+
+/* 가로로 긴 이미지 */
 .project-images .row .col-md-3 img.landscape {
   max-width: 400px;
   height: auto;
-  display: block;
-  margin: auto 0;             /* 세로 중앙 */
-}
-
-/* 세로 사진: 아래 정렬 */
-.project-images .row .col-md-3 img.portrait {
-  max-width: 350px;
-  height: auto;
-  display: block;
-  margin-top: auto;           /* 세로 끝으로 붙이기 */
-  margin-bottom: 0;           /* 필요 시 */
 }
