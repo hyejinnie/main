@@ -197,3 +197,17 @@ footer {
   max-width: 350px;
   margin-top: auto;       /* 세로 아래 정렬 */
 }
+/* 모든 이미지 기본 */
+.project-images .row .col-md-3 img {
+  max-width: 350px; /* 기본 이미지 크기 */
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* 가로 사진만 크기 키움 */
+.project-images .row .col-md-3 img.landscape {
+  max-width: 400px; /* 가로 사진만 크게 */
+  height: auto;
+}
+
