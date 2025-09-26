@@ -151,3 +151,23 @@ footer {
   font-size: 12px;
   color: white;
 }
+/* 상세 페이지 이미지 (project-images) 왼쪽 정렬 */
+.project-images {
+  display: flex;
+  flex-direction: column;  /* 세로 배치 */
+  gap: 20px;               /* 이미지 간격 */
+  padding-left: 40px;      /* HYEJIN NOH와 수직 맞춤 */
+  align-items: flex-start; /* 왼쪽 정렬 */
+}
+
+.project-images img {
+  width: 400px;   /* 이미지 크기 통일 */
+  height: auto;
+}
+
+/* 상세 페이지 header_text (작품 설명 부분) */
+.header #header_text {
+  padding-left: 40px;  /* 왼쪽 맞춤: HYEJIN NOH 위치 기준 */
+  text-align: left;
+}
+
