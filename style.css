@@ -152,21 +152,25 @@ footer {
   color: white;
 }
 .project-images .row {
-  display: flex;         
-  flex-wrap: nowrap;     
-  gap: 20px;             
-  overflow-x: auto;      
-  scroll-snap-type: x mandatory; 
-  padding-left: 40px;    
+  display: flex;
+  flex-wrap: nowrap;         
+  gap: 0;                    
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-left: 0;
+  width: 100vw;              
+  scroll-behavior: smooth;   
 }
 
 .project-images .row .col-md-3 {
-  flex: 0 0 auto;        
+  flex: 0 0 100vw;           
   scroll-snap-align: start;
+  display: flex;
+  justify-content: center;    
 }
 
 .project-images .row .col-md-3 img {
-  width: 500px;          
+  max-width: 90%;             
   height: auto;
   display: block;
 }
