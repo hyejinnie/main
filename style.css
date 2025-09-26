@@ -236,6 +236,6 @@ footer {
 body.tree-lize1 .project-images .row .col-md-3 {
   display: flex;
   justify-content: center;   /* 가로 가운데 */
-  align-items: center;       /* 세로 가운데 */
-  padding-top: -60px !important; /* 화면 가운데 기준 살짝 위로 */
+  align-items: flex-start;   /* 위쪽 기준으로 정렬 */
+  transform: translateY(-60px); /* 60px 위로 이동 */
 }
