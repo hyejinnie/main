@@ -157,6 +157,7 @@ footer {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   width: 100vw;              
+  height: 100vh;             /* 전체 화면 높이 확보 */
   scroll-behavior: smooth;   
 }
 
@@ -164,13 +165,19 @@ footer {
   flex: 0 0 100vw;           
   scroll-snap-align: start;
   display: flex;
-  justify-content: center;    /* 이미지 가로 가운데 정렬 */
-  align-items: center;        /* 이미지 세로 가운데 정렬 */
+  justify-content: center;    /* 가로 중앙 */
+  align-items: center;        /* 세로 중앙 */
 }
 
+/* 모든 이미지 기본값 */
 .project-images .row .col-md-3 img {
-  max-width: 350px;           /* 가로 최대 350px */
-  height: auto;               /* 세로 자동 비율 유지 */
-  object-fit: contain;        /* 이미지 비율 유지 */
+  max-width: 350px;
+  height: auto;
+  object-fit: contain;
   display: block;
+}
+
+/* 가로가 더 긴 이미지 (landscape)일 때 400px로 */
+.project-images .row .col-md-3 img.landscape {
+  max-width: 400px;
 }
