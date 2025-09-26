@@ -239,13 +239,3 @@ body.tree-lize1 .project-images .row .col-md-3 {
   align-items: center;       /* 세로 가운데 */
   padding-top: -60px !important; /* 화면 가운데 기준 살짝 위로 */
 }
-}
-/* whatidonthear-anymore.html 전용 이미지 크기 조절 */
-body.whatidonthear .project-images .row .col-md-3 img {
-  max-width: 560px; /* 기존 700px 기준 0.8배 */
-  height: auto;
-}
-body.whatidonthear .project-images .row .col-md-3 img.landscape {
-  max-width: 640px; /* 기존 800px 기준 0.8배 */
-  height: auto;
-}
