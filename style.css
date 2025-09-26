@@ -151,26 +151,22 @@ footer {
   font-size: 12px;
   color: white;
 }
-/* 상세페이지 가로 스크롤 슬라이드 */
-.project-images {
-  display: flex;
-  flex-direction: row;      /* 가로 배치 */
-  gap: 20px;                /* 이미지 간격 */
-  padding-left: 40px;       /* HYEJIN NOH 위치와 수직 맞춤 */
-  overflow-x: auto;         /* 가로 스크롤 가능 */
-  scroll-snap-type: x mandatory; /* 스냅으로 한 장씩 정렬 */
+.project-images .row {
+  display: flex;         
+  flex-wrap: nowrap;     
+  gap: 20px;             
+  overflow-x: auto;      
+  scroll-snap-type: x mandatory; 
+  padding-left: 40px;    
 }
 
-.project-images img {
-  flex: 0 0 auto;           /* 이미지 크기 고정 */
-  width: 500px;             /* 한 장 크기 (조절 가능) */
+.project-images .row .col-md-3 {
+  flex: 0 0 auto;        
+  scroll-snap-align: start;
+}
+
+.project-images .row .col-md-3 img {
+  width: 500px;          
   height: auto;
-  scroll-snap-align: start; /* 스크롤 스냅 */
   display: block;
-}
-
-/* 상세 페이지 header_text (작품 설명 부분) */
-.header #header_text {
-  padding-left: 40px;  /* 왼쪽 맞춤: HYEJIN NOH 위치 기준 */
-  text-align: left;
 }
