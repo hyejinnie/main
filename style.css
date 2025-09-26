@@ -200,3 +200,20 @@ footer {
   height: auto;
   /* 위치 변경 없음 (아래 정렬 유지) */
 }
+/* 모든 프로젝트 이미지 공통 */
+.project-image {
+  max-width: 525px;  /* 기존 350px * 1.5 */
+  height: auto;
+  display: block;
+  margin: 0 auto; /* 가로 가운데 정렬 */
+}
+
+/* 가로 사진 */
+.project-image.landscape {
+  max-width: 600px; /* 기존 400px * 1.5 */
+  height: auto;
+  object-fit: contain;
+}
+
+
+
