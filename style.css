@@ -57,26 +57,12 @@ footer {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* 컨테이너 (상세 페이지 정렬) */
+/* 컨테이너  */
 .container {
-  display: flex;
-  flex-direction: column; /* 세로 배치 */
-  align-items: flex-start; /* 왼쪽 정렬 */
-  padding-left: 40px; /* HYEJIN NOH와 같은 수직선 */
-  margin-top: 40px;   /* 위 간격 */
-  max-width: 600px;   /* 본문 폭 제한 */
   margin-right: 20px;
   position: relative;
 }
 
-/* 상세페이지 이미지 크기 통일 */
-.container img {
-  max-width: 400px;  /* 원하는 크기 */
-  height: auto;      /* 비율 유지 */
-  margin-top: 20px;  /* 글과 이미지 사이 여백 */
-  margin-bottom: 20px;
-  display: block;
-}
 
 /* 오른쪽 가로 사이드 메뉴 */
 .sidebar {
