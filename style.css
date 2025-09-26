@@ -179,7 +179,7 @@ footer {
 
 /* 가로 사진: 화면 중앙 */
 .project-images .row .col-md-3 img.landscape {
-  max-width: 400px;
+  max-width: 500px;
   height: auto;
   display: block;
   margin: auto 0;             /* 세로 중앙 */
