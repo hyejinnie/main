@@ -214,5 +214,22 @@ footer {
   height: auto;
   object-fit: contain;
 }
+/* ----------------------------- */
+/* 이미지 최종 크기 (2배 확대 적용) */
+/* ----------------------------- */
 
+/* 모든 프로젝트 이미지 공통 */
+.project-image {
+  max-width: 700px !important;  /* 기존 350px × 2 */
+  height: auto;
+  display: block;
+  margin: 0 auto; /* 가로 가운데 정렬 */
+}
+
+/* 가로 사진 */
+.project-image.landscape {
+  max-width: 800px !important; /* 기존 400px × 2 */
+  height: auto;
+  object-fit: contain;
+}
 
