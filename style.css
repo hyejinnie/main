@@ -256,4 +256,19 @@ body.tree-lize1 .project-images .row .col-md-3 {
   display: block;
   margin: 0 auto;
 }
+/* 모든 가로 스크롤 컨테이너 */
+.project-images .row .col-md-3.landscape-container {
+  display: flex;
+  justify-content: center;   /* 가로 중앙 */
+  align-items: flex-start;   /* 위쪽 기준 */
+  transform: translateY(-60px); /* 컨테이너 전체 위로 이동 */
+}
+
+/* 이미지 */
+.project-images .row .col-md-3.landscape-container img {
+  max-width: 800px;  /* 기존보다 큰 가로 사진 */
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
 
