@@ -239,23 +239,21 @@ body.tree-lize1 .project-images .row .col-md-3 {
   align-items: flex-start;   /* 위쪽 기준으로 정렬 */
   transform: translateY(-60px); /* 60px 위로 이동 */
 }
-/* ===============================
-   1. 모든 프로젝트 이미지 공통
-   =============================== */
-.project-image {
-  max-width: 700px !important;  /* 기본 크기 */
-  height: auto;
-  display: block;
-  margin: 0 auto;               /* 가로 중앙 */
-}
-
-.project-image.landscape {
-  max-width: 800px !important;  /* 가로 사진 크기 */
+/* 가로 사진 위치 조정 (tree-lize1 스타일) */
+.project-images .row .col-md-3 img.landscape {
+  max-width: 800px;          /* 필요 시 크기 */
   height: auto;
   object-fit: contain;
+  transform: translateY(-60px);  /* 위쪽 이동 */
+  display: block;
+  margin: 0 auto;             /* 가로 중앙 */
 }
 
-/* ===============================
-   2. 가로 스크롤 공통
-   =============================== */
+/* 세로 사진은 위치 변경 없음 */
+.project-images .row .col-md-3 img.portrait {
+  max-width: 350px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
 
