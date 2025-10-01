@@ -239,3 +239,16 @@ body.tree-lize1 .project-images .row .col-md-3 {
   align-items: flex-start; /* 위쪽 기준으로 정렬 */
   transform: translateY(-60px); /* 60px 위로 이동 */ 
 }
+/* tree-lize1.html 전용 - 모든 이미지 위 정렬 */
+body.tree-lize1 .project-images .row {
+  display: flex; 
+  align-items: flex-start;   /* 행 안의 모든 col-md-3을 위 기준으로 */
+}
+
+body.tree-lize1 .project-images .row .col-md-3 {
+  display: flex;
+  justify-content: center;   /* 가로 중앙 */
+  align-items: flex-start;   /* 위쪽 기준으로 정렬 */
+  /* transform 제거! */
+}
+
