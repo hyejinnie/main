@@ -256,3 +256,51 @@ body.tree-lize1 .project-images .row .col-md-3 img.portrait {
   display: block;
   margin: 0 auto;
 }
+/* 1) 기존 변형/여백 초기화(우선순위 강하게 덮기) */
+body.tree-lize1 .project-images,
+body.tree-lize1 .project-images .row,
+body.tree-lize1 .project-images .row .col-md-3 {
+  padding: 0 !important;
+  margin: 0 !important;
+  transform: none !important; /* 이전 translateY 제거 */
+  box-sizing: border-box !important;
+}
+
+/* 2) 행(row) 단위로 컬럼들을 위쪽 정렬(행 안에서 컬럼 높이 정렬) */
+body.tree-lize1 .project-images .row {
+  display: flex !important;
+  align-items: flex-start !important; /* 행 내부 컬럼의 시작(윗변) 정렬 */
+  gap: 0; /* 필요 시 간격 조정 */
+}
+
+/* 3) 각 컬럼에서 이미지 자체를 위쪽으로 붙이기(컬럼 안 아이템 정렬) */
+body.tree-lize1 .project-images .row .col-md-3 {
+  display: flex !important;
+  align-items: flex-start !important;  /* 컬럼 내부 아이템(이미지) 위쪽 정렬 */
+  justify-content: center !important;  /* 가로 중앙 정렬 유지 */
+  padding-top: 0 !important;
+}
+
+/* 4) 이미지 공통 리셋 및 강제 상단 정렬 */
+body.tree-lize1 .project-images .row .col-md-3 img {
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  align-self: flex-start !important;  /* 각 이미지의 윗변을 컬럼의 시작선에 맞춤 */
+  transform: none !important;          /* 이전에 붙어있던 translate 제거 */
+  vertical-align: top !important;
+  border: 0;
+}
+
+/* 5) 사이즈 규칙 (원하시는 픽셀 고정) */
+body.tree-lize1 .project-images .row .col-md-3 img.landscape {
+  width: 800px !important;   /* 가로 사진 픽셀 고정 */
+  height: auto !important;
+  object-fit: contain !important;
+}
+body.tree-lize1 .project-images .row .col-md-3 img.portrait {
+  width: 350px !important;   /* 세로 사진 픽셀 고정(원하시면 조정) */
+  height: auto !important;
+  object-fit: contain !important;
+}
+
