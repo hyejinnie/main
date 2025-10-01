@@ -241,16 +241,26 @@ body.tree-lize1 .project-images .row .col-md-3 {
   transform: translateY(-60px); /* 60px 위로 이동 */ 
 }
 
-/* tree-lize1.html 전용 - 행 내부 위 정렬 */
+/* tree-lize1.html 전용 - 행 안 모든 이미지 위쪽 라인 정렬 */
 body.tree-lize1 .project-images .row {
-  display: flex;
-  align-items: flex-start; /* 같은 행의 모든 이미지 위쪽 라인 맞추기 */
+  display: flex !important;          /* Bootstrap 기본도 덮어쓰기 */
+  align-items: flex-start !important; /* 행 안 모든 col-md-3을 위 정렬 */
 }
 
+/* 각 칸(col) 안에서도 이미지 위 정렬 */
 body.tree-lize1 .project-images .row .col-md-3 {
-  display: flex;
-  justify-content: center;  /* 가운데 정렬 */
-  align-items: flex-start;  /* 위 정렬 */
+  display: flex !important;
+  justify-content: center !important;  /* 가운데 */
+  align-items: flex-start !important;  /* 위쪽 */
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
+/* 이미지 자체도 위쪽 기준으로 */
+body.tree-lize1 .project-images .row .col-md-3 img {
+  align-self: flex-start !important;
+  margin: 0 auto !important;
+  transform: none !important;   /* 혹시 예전 translateY 제거 */
+  display: block !important;
+}
 
