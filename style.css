@@ -232,28 +232,27 @@ footer {
   height: auto;
   object-fit: contain;
 }
-/* tree-lize1.html 전용 공통 설정 */
+/* tree-lize1.html 전용 - 위쪽 라인 맞추기 */
 body.tree-lize1 .project-images .row .col-md-3 {
   display: flex;
-  justify-content: center;   /* 가로 중앙 */
-  align-items: flex-start;   /* 위쪽 기준 */
+  justify-content: center;    /* 가로 중앙 */
+  align-items: flex-start;    /* 위쪽 기준으로 정렬 (핵심!) */
 }
 
 /* 가로 사진 */
 body.tree-lize1 .project-images .row .col-md-3 img.landscape {
-  width: 800px;             /* 가로 사진은 픽셀 기준 고정 */
+  width: 800px;              /* 픽셀 단위 크기 */
   height: auto;
   object-fit: contain;
   display: block;
   margin: 0 auto;
-  transform: translateY(-60px); /* 동일한 위치 조정 */
 }
 
 /* 세로 사진 */
 body.tree-lize1 .project-images .row .col-md-3 img.portrait {
-  width: 350px;             /* 세로 사진도 픽셀 기준 (필요하면 조정 가능) */
+  width: 350px;              /* 픽셀 단위 크기 */
   height: auto;
+  object-fit: contain;
   display: block;
   margin: 0 auto;
-  transform: translateY(-60px); /* 위치만 동일하게 올림 */
 }
