@@ -232,6 +232,7 @@ footer {
   height: auto;
   object-fit: contain;
 }
+
 /* tree-lize1.html 전용 가로 스크롤 이미지 위치 조정*/
 body.tree-lize1 .project-images .row .col-md-3 {
   display: flex;
@@ -239,6 +240,7 @@ body.tree-lize1 .project-images .row .col-md-3 {
   align-items: flex-start; /* 위쪽 기준으로 정렬 */
   transform: translateY(-60px); /* 60px 위로 이동 */ 
 }
+
 /* tree-lize1.html 전용 - 모든 이미지 위 정렬 */
 body.tree-lize1 .project-images .row {
   display: flex; 
