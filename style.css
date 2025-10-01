@@ -232,47 +232,19 @@ footer {
   height: auto;
   object-fit: contain;
 }
-/* tree-lize1.html 전용 가로 스크롤 이미지 위치 조정 */
+/* tree-lize1.html 전용 - 모든 이미지 위치 조정 */
 body.tree-lize1 .project-images .row .col-md-3 {
   display: flex;
-  justify-content: center;   /* 가로 가운데 */
-  align-items: flex-start;   /* 위쪽 기준으로 정렬 */
-  transform: translateY(-60px); /* 60px 위로 이동 */
+  justify-content: center;     /* 가로 가운데 */
+  align-items: flex-start;     /* 위쪽 기준 정렬 */
 }
-/* 가로 사진 위치 조정 (tree-lize1 스타일) */
-.project-images .row .col-md-3 img.landscape {
-  max-width: 800px;          /* 필요 시 크기 */
+
+/* tree-lize1 - 가로/세로 이미지 모두 위로 이동 */
+body.tree-lize1 .project-images .row .col-md-3 img {
+  max-width: 800px;            /* 필요 시 최대 크기 제한 */
   height: auto;
   object-fit: contain;
-  transform: translateY(-60px);  /* 위쪽 이동 */
+  transform: translateY(-60px); /* 전체 이미지 위로 이동 */
   display: block;
-  margin: 0 auto;             /* 가로 중앙 */
+  margin: 0 auto;              /* 가로 중앙 */
 }
-
-/* 세로 사진은 위치 변경 없음 */
-.project-images .row .col-md-3 img.portrait {
-  max-width: 350px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-/* 모든 가로 스크롤 컨테이너 */
-.project-images .row .col-md-3.landscape-container {
-  display: flex;
-  justify-content: center;   /* 가로 중앙 */
-  align-items: flex-start;   /* 위쪽 기준 */
-  transform: translateY(-60px); /* 컨테이너 전체 위로 이동 */
-}
-
-/* 이미지 */
-.project-images .row .col-md-3.landscape-container img {
-  max-width: 800px !important;
-  height: auto !important;
-  object-fit: contain !important;
-  display: block !important;
-}
-/* 특정 이미지 컨테이너만 위로 30px 이동 */
-.project-images .row .col-md-3.landscape-container img[src="whatidonthear-anymore-4.jpg"] {
-  transform: translateY(-30px);
-}
-
