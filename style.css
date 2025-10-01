@@ -240,27 +240,32 @@ body.tree-lize1 .project-images .row .col-md-3 {
   align-items: flex-start; /* 위쪽 기준으로 정렬 */
   transform: translateY(-60px); /* 60px 위로 이동 */ 
 }
+/* ================================================== */
+/* tree-lize1.html 전용 - 모든 이미지 위쪽 라인 기준으로 맞춤 */
+/* ================================================== */
 
-/* tree-lize1.html 전용 - 행 안 모든 이미지 위쪽 라인 정렬 */
-body.tree-lize1 .project-images .row {
-  display: flex !important;          /* Bootstrap 기본도 덮어쓰기 */
-  align-items: flex-start !important; /* 행 안 모든 col-md-3을 위 정렬 */
-}
-
-/* 각 칸(col) 안에서도 이미지 위 정렬 */
+/* 컬럼(.col-md-3) 전체를 기준 위치로 강제 이동 */
 body.tree-lize1 .project-images .row .col-md-3 {
-  display: flex !important;
-  justify-content: center !important;  /* 가운데 */
-  align-items: flex-start !important;  /* 위쪽 */
-  padding: 0 !important;
-  margin: 0 !important;
+  display: flex;
+  justify-content: center;   /* 가로 중앙 */
+  align-items: flex-start;   /* 컬럼 내부 위쪽 기준 */
+  transform: translateY(-60px); /* treelize1 기준 사진 위치와 동일하게 조정 */
 }
 
-/* 이미지 자체도 위쪽 기준으로 */
-body.tree-lize1 .project-images .row .col-md-3 img {
-  align-self: flex-start !important;
-  margin: 0 auto !important;
-  transform: none !important;   /* 혹시 예전 translateY 제거 */
-  display: block !important;
+/* 가로 사진 강제 크기 및 정렬 */
+body.tree-lize1 .project-images .row .col-md-3 img.landscape {
+  width: 800px;              /* 픽셀 단위 크기 */
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
+
+/* 세로 사진 강제 크기 및 정렬 */
+body.tree-lize1 .project-images .row .col-md-3 img.portrait {
+  width: 350px;              /* 필요 시 픽셀 단위 조정 */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
 
