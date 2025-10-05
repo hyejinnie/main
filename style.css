@@ -267,10 +267,20 @@ body.tree-lize1 .project-images .row .col-md-3 img.portrait {
   display: block;
   margin: 0 auto;
 }
-body.whatidonthear-anymore .project-image {
-  width: 83%;  /* 기존보다 약 1.2배 줄임 */
+
+/* 이 페이지의 portrait 사진만 1.2배 축소 */
+body.whatidonthear-anymore .project-image.portrait {
+  width: 83%;  /* 약 1.2배 축소 */
   height: auto;
   display: block;
-  margin: 0 auto; /* 가운데 정렬 */
+  margin: 0 auto;
 }
+
+/* landscape 사진은 크기 그대로 두고, 위쪽 정렬 */
+body.whatidonthear-anymore .landscape-container {
+  display: flex;            /* 정렬 제어 */
+  align-items: flex-start;  /* 위쪽에 맞춤 */
+  justify-content: center;  /* 가로 가운데 정렬 */
+}
+
 
