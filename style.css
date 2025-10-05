@@ -267,19 +267,52 @@ body.tree-lize1 .project-images .row .col-md-3 img.portrait {
   display: block;
   margin: 0 auto;
 }
-/* 이 페이지에서만 portrait 줄이기 */
+/* portrait 이미지 */
 body.whatidonthear-anymore .project-image.portrait {
-  width: 83%;
+  width: 83%;           
+  height: auto;
+  margin: 0 auto;       
+  display: block;
+}
+
+/* landscape 이미지 */
+body.whatidonthear-anymore .landscape-container {
+  display: flex;
+  justify-content: center; 
+  align-items: flex-start; 
+}
+
+body.whatidonthear-anymore .landscape-container img.landscape {
+  width: 800px;          
   height: auto;
   display: block;
   margin: 0 auto;
 }
 
-/* landscape는 크기 그대로 두되, 위쪽에 맞추기 */
-body.whatidonthear-anymore .landscape-container {
+/* 프로젝트 이미지 가로 스크롤 */
+body.whatidonthear-anymore .project-images {
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  gap: 20px;
+  width: 100vw;
+  padding-left: 0;
+  box-sizing: border-box;
 }
+
+body.whatidonthear-anymore .project-images .row {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+body.whatidonthear-anymore .project-images .row .col-md-3 {
+  flex: 0 0 100vw;       
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  scroll-snap-align: start;
+}
+
 
 
