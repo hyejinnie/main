@@ -263,3 +263,29 @@ body.tree-lize2 .project-images .row .col-md-3 img.portrait {
   display: block;
   margin: 0 auto;
 }
+/* ================================================== */
+/* 모든 HTML 공통 - 프로젝트 이미지 위치/크기 통일 */
+/* ================================================== */
+
+.project-images .row .col-md-3 {
+  display: flex;
+  justify-content: center;   /* 가로 중앙 */
+  align-items: flex-start;   /* 위쪽 기준 */
+  transform: translateY(-60px); /* 위로 60px 이동 */
+}
+
+/* 가로 사진 크기 */
+.project-images .row .col-md-3 img.landscape {
+  width: 800px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* 세로 사진 크기 */
+.project-images .row .col-md-3 img.portrait {
+  width: 400px;   /* 세로 사진은 400px */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
