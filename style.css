@@ -314,5 +314,29 @@ body.whatidonthear-anymore .project-images .row .col-md-3 {
   scroll-snap-align: start;
 }
 
+/* 프로젝트 이미지 감싸는 container 높이 고정 */
+body.whatidonthear-anymore .project-images {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  gap: 20px;
+  width: 100vw;
+  height: 300px;       /* 높이 고정 */
+  padding-left: 0;
+  box-sizing: border-box;
+}
+
+/* 각 이미지 컬럼도 높이에 맞게 */
+body.whatidonthear-anymore .project-images .row .col-md-3 {
+  flex: 0 0 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  scroll-snap-align: start;
+  height: 100%;       /* 상위 container 높이에 맞춤 */
+}
+
+
 
 
