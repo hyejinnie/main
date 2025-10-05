@@ -267,5 +267,10 @@ body.tree-lize1 .project-images .row .col-md-3 img.portrait {
   display: block;
   margin: 0 auto;
 }
-
+body.whatidonthear-anymore .project-image {
+  width: 83%;  /* 기존보다 약 1.2배 줄임 */
+  height: auto;
+  display: block;
+  margin: 0 auto; /* 가운데 정렬 */
+}
 
