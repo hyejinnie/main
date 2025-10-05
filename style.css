@@ -267,3 +267,58 @@ body.tree-lize1 .project-images .row .col-md-3 img.portrait {
   display: block;
   margin: 0 auto;
 }
+/* ============================= */
+/* whatidonthear-anymore 전용 CSS */
+/* ============================= */
+
+/* 프로젝트 이미지 container */
+body.whatidonthear-anymore .project-images {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  gap: 20px;
+  width: 100vw;
+  height: auto;       /* 고정 높이 제거 (비율에 맞게 자동) */
+  padding-left: 0;
+  box-sizing: border-box;
+  margin-top: -20px;  /* 전체 이미지를 살짝 위로 올림 */
+}
+
+/* row */
+body.whatidonthear-anymore .project-images .row {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+/* 각 이미지 컬럼 */
+body.whatidonthear-anymore .project-images .row .col-md-3 {
+  flex: 0 0 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* 위쪽 정렬 */
+  scroll-snap-align: start;
+}
+
+/* portrait 이미지: 지금 크기에서 20% 줄이기 */
+body.whatidonthear-anymore .project-image.portrait {
+  width: 80%;   /* 기존 대비 20% 축소 */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* landscape 이미지: 크기 그대로, 위쪽 정렬 */
+body.whatidonthear-anymore .landscape-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* 위쪽 정렬 */
+}
+
+body.whatidonthear-anymore .landscape-container img.landscape {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
