@@ -233,27 +233,22 @@ footer {
   object-fit: contain;
 }
 
-/* tree-lize1.html 전용 가로 스크롤 이미지 위치 조정*/
-body.tree-lize1 .project-images .row .col-md-3 {
-  display: flex;
-  justify-content: center; /* 가로 가운데 */
-  align-items: flex-start; /* 위쪽 기준으로 정렬 */
-  transform: translateY(-60px); /* 60px 위로 이동 */ 
-}
 /* ================================================== */
-/* tree-lize1.html 전용 - 모든 이미지 위쪽 라인 기준으로 맞춤 */
+/* tree-lize1.html + tree-lize2.html 전용 - 이미지 위치 조정 */
 /* ================================================== */
 
 /* 컬럼(.col-md-3) 전체를 기준 위치로 강제 이동 */
-body.tree-lize1 .project-images .row .col-md-3 {
+body.tree-lize1 .project-images .row .col-md-3,
+body.tree-lize2 .project-images .row .col-md-3 {
   display: flex;
   justify-content: center;   /* 가로 중앙 */
   align-items: flex-start;   /* 컬럼 내부 위쪽 기준 */
-  transform: translateY(-60px); /* treelize1 기준 사진 위치와 동일하게 조정 */
+  transform: translateY(-60px); /* 동일 위치로 위로 올림 */
 }
 
 /* 가로 사진 강제 크기 및 정렬 */
-body.tree-lize1 .project-images .row .col-md-3 img.landscape {
+body.tree-lize1 .project-images .row .col-md-3 img.landscape,
+body.tree-lize2 .project-images .row .col-md-3 img.landscape {
   width: 800px;              /* 픽셀 단위 크기 */
   height: auto;
   display: block;
@@ -261,110 +256,10 @@ body.tree-lize1 .project-images .row .col-md-3 img.landscape {
 }
 
 /* 세로 사진 강제 크기 및 정렬 */
-body.tree-lize1 .project-images .row .col-md-3 img.portrait {
+body.tree-lize1 .project-images .row .col-md-3 img.portrait,
+body.tree-lize2 .project-images .row .col-md-3 img.portrait {
   width: 350px;              /* 필요 시 픽셀 단위 조정 */
   height: auto;
   display: block;
   margin: 0 auto;
 }
-/* ============================= */
-/* whatidonthear-anymore 전용 CSS */
-/* ============================= */
-
-/* 프로젝트 이미지 container */
-body.whatidonthear-anymore .project-images {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  gap: 20px;
-  width: 100vw;
-  height: auto;       /* 고정 높이 제거 (비율에 맞게 자동) */
-  padding-left: 0;
-  box-sizing: border-box;
-  margin-top: -20px;  /* 전체 이미지를 살짝 위로 올림 */
-}
-
-/* row */
-body.whatidonthear-anymore .project-images .row {
-  display: flex;
-  flex-wrap: nowrap;
-}
-
-/* 각 이미지 컬럼 */
-body.whatidonthear-anymore .project-images .row .col-md-3 {
-  flex: 0 0 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start; /* 위쪽 정렬 */
-  scroll-snap-align: start;
-}
-
-/* portrait 이미지: 지금 크기에서 20% 줄이기 */
-body.whatidonthear-anymore .project-image.portrait {
-  width: 80%;   /* 기존 대비 20% 축소 */
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-/* landscape 이미지: 크기 그대로, 위쪽 정렬 */
-body.whatidonthear-anymore .landscape-container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start; /* 위쪽 정렬 */
-}
-
-body.whatidonthear-anymore .landscape-container img.landscape {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-/* 프로젝트 이미지 전체 컨테이너 */
-body.whatidonthear-anymore .project-images {
-  display: flex;
-  overflow-x: auto;       /* 가로 스크롤 유지 */
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  gap: 20px;
-  width: 100vw;
-  height: 100vh;          /* 뷰포트 높이 기준 */
-  padding-left: 0;
-  box-sizing: border-box;
-  margin-top: -20px;      /* 살짝 위로 올림 */
-}
-
-/* row */
-body.whatidonthear-anymore .project-images .row {
-  display: flex;
-  flex-wrap: nowrap;
-  height: 100%;
-}
-
-/* 각 이미지 칸 */
-body.whatidonthear-anymore .project-images .row .col-md-3 {
-  flex: 0 0 100vw;        /* 화면 한 장씩 */
-  display: flex;
-  justify-content: center;
-  align-items: flex-start; /* 위 정렬 */
-  scroll-snap-align: start;
-  height: 100%;
-}
-
-/* portrait 이미지: 현재 크기에서 20% 줄이기 + 화면 높이에 맞춤 */
-body.whatidonthear-anymore .project-image.portrait {
-  max-height: 80vh;       /* 화면 높이의 80%까지만 */
-  width: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-/* landscape 이미지: 높이 동일하게 맞추고 위 정렬 */
-body.whatidonthear-anymore .landscape-container img.landscape {
-  max-height: 80vh;       /* portrait과 동일 비율 */
-  width: auto;
-  display: block;
-  margin: 0 auto;
-}
-
