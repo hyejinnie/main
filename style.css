@@ -321,4 +321,50 @@ body.whatidonthear-anymore .landscape-container img.landscape {
   display: block;
   margin: 0 auto;
 }
+/* 프로젝트 이미지 전체 컨테이너 */
+body.whatidonthear-anymore .project-images {
+  display: flex;
+  overflow-x: auto;       /* 가로 스크롤 유지 */
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  gap: 20px;
+  width: 100vw;
+  height: 100vh;          /* 뷰포트 높이 기준 */
+  padding-left: 0;
+  box-sizing: border-box;
+  margin-top: -20px;      /* 살짝 위로 올림 */
+}
+
+/* row */
+body.whatidonthear-anymore .project-images .row {
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100%;
+}
+
+/* 각 이미지 칸 */
+body.whatidonthear-anymore .project-images .row .col-md-3 {
+  flex: 0 0 100vw;        /* 화면 한 장씩 */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* 위 정렬 */
+  scroll-snap-align: start;
+  height: 100%;
+}
+
+/* portrait 이미지: 현재 크기에서 20% 줄이기 + 화면 높이에 맞춤 */
+body.whatidonthear-anymore .project-image.portrait {
+  max-height: 80vh;       /* 화면 높이의 80%까지만 */
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* landscape 이미지: 높이 동일하게 맞추고 위 정렬 */
+body.whatidonthear-anymore .landscape-container img.landscape {
+  max-height: 80vh;       /* portrait과 동일 비율 */
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
 
